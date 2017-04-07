@@ -331,10 +331,10 @@ p {
 	cursor: auto;
 }
 
-.people-name{font-size: 30px; font-weight: 300; color: white; max-height: 30px;}
-.people-position{font-size: 24px; color: white;}
-.people-summary{font-size: 14px; color: white;}
-.people-email{font-size: 18px; color: white;}
+.people-name{font-size: 2.8vw; font-weight: 300; color: white; max-height: 30px;}
+.people-position{font-size: 1.8vw; color: white;}
+.people-summary{font-size: 1.1vw; color: white;}
+.people-email{font-size: 1.5vw; color: white;}
 
 .people-1{background-image:url('../images/lab_members/ivan_moskowitz_orig.png');}
 /* .people-1{background-image:url('../images/lab_members/ivan_moskowitz.jpg');} */
@@ -403,7 +403,7 @@ p {
 	margin-left: 10px;
 	text-align: justify;
 	font-weight: lighter;
-	border-left: solid 2px rgb(230,230,230);
+	border-left: solid 1px rgb(230,230,230);
 }
 
 /************** PUBLICATIONS *************/
@@ -464,6 +464,12 @@ p {
 	padding-right: 20px;
 	font-size: 18px;
 	font-weight: bolder;
+}
+#pub-list li .pub-link a.pub-pdf-dead {
+	color: grey;
+}
+#pub-list li .pub-link a.pub-pdf-dead:before {
+	content: "Free PDF not yet available";
 }
 #pub-list li .pub-link a.pub-pdf:before {
 	content: "View PDF";
