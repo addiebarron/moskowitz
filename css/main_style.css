@@ -10,7 +10,8 @@ a {
 	color: rgb(40, 40, 140)
 }
 a:hover { 
-	color: rgb(70, 70, 170) ; 
+	color: rgb(70, 70, 170);
+	text-decoration: underline; 
 }
 body { 
 	font-family: 'Lato', sans-serif; 
@@ -31,8 +32,6 @@ p {
 .container {
 	padding: 50px 50px 175px 50px;
 }
-
-
 /****************** NAVBAR ***************/
 
 #nav-wrap {
@@ -65,7 +64,7 @@ p {
 */}
 #nav-wrap td {
 	vertical-align: middle;
-	padding-right: 40px;
+	padding-right: 0px;
 }
 #nav-wrap .container ul { 
 	vertical-align: middle;
@@ -317,24 +316,36 @@ p {
 	margin: 10%;
 	display: table;
 	border-spacing: 5px;
-    border-collapse:separate;
+    border-collapse: separate;
     cursor: pointer;
 }
-.people-over div div {
+.people-over div div { /* text fields */
 	padding: 0px;
+	width: 100%;
 	display: table-row;
 }
 
 .people-name, .people-position, .people-summary, .people-email {
 	font-family: "Lato";
-	font-weight: 200;
+	font-weight: lighter;
 	cursor: auto;
+	color: white;
 }
 
-.people-name{font-size: 2.8vw; font-weight: 300; color: white; max-height: 30px;}
-.people-position{font-size: 1.8vw; color: white;}
-.people-summary{font-size: 1.1vw; color: white;}
-.people-email{font-size: 1.5vw; color: white;}
+.people-name {
+	font-size: 2.8vw;
+	font-weight: 300;
+}
+.people-position {
+	font-size: 1.8vw;
+	font-style: italic;
+}
+.people-summary {
+	font-size: 1.1vw;
+}
+.people-email {
+	font-size: 1.5vw;
+}
 
 .people-1{background-image:url('../images/lab_members/ivan_moskowitz_orig.png');}
 /* .people-1{background-image:url('../images/lab_members/ivan_moskowitz.jpg');} */
@@ -419,6 +430,7 @@ p {
 	width: 100%;
 	list-style: none;
 	padding-left: 0;
+	border-bottom: solid 1px gainsboro;
 }
 
 #pub-list li {

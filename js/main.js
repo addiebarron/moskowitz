@@ -42,6 +42,29 @@ $(document).ready( function(){
     });
     $elements.appendTo('#pub-list'); 
     // this is left over from when I wanted to make the publications sortable by date.  now they are all automatically sorted by date, with no option to resort.  if I wanted to resort by date or some other parameter, I'd use this code.  I could have just re-ordered the list items in the html, but this was easier.
+    $('.link').each(function(){
+
+    	var text = $(this).text();
+
+    	$(this).click(function(){
+    		window.open($(this).data('link'),'_blank');
+    	});
+
+    	$(this).onmouseover(function(){
+    		text = $(this).text()
+    		setTimeout(function(){
+    			$(this).fadeOut(300);
+    			$(this).text('').text('See Website');
+    			$(this.fadeIn(300);
+    		},500);
+    	}).onmouseleave(function(){
+    		setTimeout(function(){
+    			$(this).fadeOut(300);
+    			$(this).text('').text(text);
+    			$(this.fadeIn(300);
+    		},500);
+    	});
+    });
 });
 
 $(window).on('load resize', function(){
@@ -61,9 +84,9 @@ $(document).scroll( function(){
 
 	if (scroll < diff) {
 		$('#nav-wrap').css({
-			'background-color':'rgba(256,256,256,' + 1 - percent/3. + ')',
+			'background-color':'rgba(256,256,256,' + 1. - percent / 3. + ')',
 			'height': hmax - scroll,
-			'opacity': (1./percent) * 0.7
+			'opacity': (1. / percent) * 0.9
 		});
 		$('.fade-with-navbar').css({
 			'opacity': 1. - percent
@@ -73,7 +96,7 @@ $(document).scroll( function(){
 		$('#nav-wrap').css({
 			'background-color':'',
 			'height': hmin,
-			'opacity': 0.7
+			'opacity': 0.9
 		});
 		$('.fade-with-navbar').css({'opacity': 0});
 	} 
