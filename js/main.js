@@ -42,28 +42,8 @@ $(document).ready( function(){
     });
     $elements.appendTo('#pub-list'); 
     // this is left over from when I wanted to make the publications sortable by date.  now they are all automatically sorted by date, with no option to resort.  if I wanted to resort by date or some other parameter, I'd use this code.  I could have just re-ordered the list items in the html, but this was easier.
-    $('.link').each(function(){
-
-    	var text = $(this).text();
-
-    	$(this).click(function(){
-    		window.open($(this).data('link'),'_blank');
-    	});
-
-    	$(this).onmouseover(function(){
-    		text = $(this).text()
-    		setTimeout(function(){
-    			$(this).fadeOut(300);
-    			$(this).text('').text('See Website');
-    			$(this.fadeIn(300);
-    		},500);
-    	}).onmouseleave(function(){
-    		setTimeout(function(){
-    			$(this).fadeOut(300);
-    			$(this).text('').text(text);
-    			$(this.fadeIn(300);
-    		},500);
-    	});
+    $('.link').click(function(){
+    	window.open($(this).data('link'),'_blank');
     });
 });
 

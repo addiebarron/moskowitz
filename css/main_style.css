@@ -11,7 +11,6 @@ a {
 }
 a:hover { 
 	color: rgb(70, 70, 170);
-	text-decoration: underline; 
 }
 body { 
 	font-family: 'Lato', sans-serif; 
